@@ -53,9 +53,9 @@ class Point(object):
         return self.distance
 
     def closer_to(self, p2, p3):
-        distance_p2 = math.sqrt((self.x - p2.x) ** 2 + (self.y - p2.x) ** 2)
+        distance_p2 = math.sqrt((self.x - p2.x) ** 2 + (self.y - p2.y) ** 2)
         distance_p3 = math.sqrt((self.x - p3.x) ** 2 + (self.y - p3.y) ** 2)
-        if distance_p2 >= distance_p3:
+        if distance_p2 <= distance_p3:
             return p2
         else:
             return p3
